@@ -1,0 +1,27 @@
+api:
+  prefix: /api
+  version: /v1
+
+spring:
+  jpa:
+    show-sql: false
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    hibernate:
+      ddl-auto: create
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5447/postgres
+    username: postgres
+    password: 12345
+
+  jackson:
+    time-zone: America/Sao_Paulo
+    locale: pt_BR
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
